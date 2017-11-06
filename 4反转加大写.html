@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<script type="text/javascript">
+//利用var s1=prompt("请输入任意字符"，"")可以获取用户输入的字符（输入一个单词）（存到变s1中），试编程将用户输入的字符 “反转顺序”并首尾字母转为大写，其他字母转为小写后alert出来；
+//如：Beijing GnijieB
+//不敲回车都是一行；换行就不行了；
+
+/*基本思路，一步步进行
+	(1)获取用户输入的单词；
+		var str=prompt("请输入任意字符"，"");//BEIJiNg
+	(2)全部改成小写，后面动首尾两个字母就可以了；
+		str.toLowerCase();//beijing
+	(3)看字符串有没有方法，没有只能转为数组来处理；
+		var arr=str.split("");//处理紧挨着的字符串
+		arr=["b","e","i","j","i","n","g"]
+	(4)将数组元素反转顺序；
+		arr.reverse();//
+		arr=["g","n","i","j","i","e","b"]
+	(5)首尾字符转大写；
+		arr[0]=arr[0].toUpperCase();
+		arr[arr.length-1]=arr[arr.length-1].toUpperCase();
+		//arr=["G","n","i","j","i","e","B"]
+	(6)将数组元素连接成一个字符串
+	str=arr.join("");//GnijeB
+	(7)弹出结果，window.alert(str);
+注意，对每步进行输出结果验证，看看结果对不对；
+*/
+
+//获取用户输入的单词
+var str=window.prompt("请输入一个单词");
+//转化为全小写
+str=str.toLowerCase();
+// document.write(str); //运行正确；
+
+// 将字符串转化为数组
+// 调用切割方法
+var arr=str.split("");
+//alert(arr);
+//输出数组测试下；//运行正确；
+//数组反转顺序
+arr=arr.reverse();
+//alert(arr);
+//数组首尾字母大写
+arr[0]=arr[0].toUpperCase();
+arr[arr.length-1]=arr[arr.length-1].toUpperCase();
+//alert(arr); //运行正确
+//注意toUpperCase大小写；
+//将数组连接成一个字符串
+str=arr.join("");
+//数组方法的调用？？
+alert(str);
+</script>
+</head>
+<body>
+    
+</body>
+</html>

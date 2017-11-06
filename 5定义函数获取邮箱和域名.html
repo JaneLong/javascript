@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>定义函数获取邮箱和域名</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<script type="text/javascript">
+//全局变量，在函数外定义，可以在函数内部使用；
+var email=prompt("请输入一个邮箱地址");
+function getEmailInfo()
+{
+ var index=email.indexOf("@");
+//取出用户名和域名；
+var username=email.substr(0,index);
+var hostname=email.substr(index+1);
+
+//输出结果
+document.write("用户名："+username+"<br>"+"域名是："+hostname);
+}
+getEmailInfo();
+//还有一种比较简单的做法是用arr数组，split分割，输出arr[0]和arr[1];
+</script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+//（字符）获取一个长文件路径（比如：“E:/itcase/class/php/js/day2/abc.html”）中的文件名（abc）及其后缀（html）；
+var str="E:/itcase/class/php/js/day2/abc.html";
+//使用spilt分隔字符串；
+var arr=str.split("/");
+//alert(arr.length);
+//测试分隔的数量，方便下一步的操作；熟练以后可以写完之后再测试；
+//
+//取出文件名，并存入一个变量；
+var filename=arr[arr.length-1];
+// alert(filename);测试输出结果
+// //使用小数点分隔abc.html；
+var arr2=filename.split(".");
+//小心不要写错split
+document.write("文件名："+arr2[0]+"<br>拓展名："+arr2[1]);
+
+	</script>
+</head>
+<body>
+	<p>主要知识点是数组，分割，变量</p>
+</body>
+</html>
