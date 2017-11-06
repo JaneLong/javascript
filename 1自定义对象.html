@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+<script type="text/javascript">
+//（1）使用关键字new结合构造函数Object（）来创建一个空的对象
+var obj=new Object();
+//中间需要空格分开new和名字；
+//增加属性
+obj.name="张三";
+obj.sex="男";
+obj.age="23";
+obj.isMarried=true;
+obj.school;
+//增加方法，将一个函数定义赋给了对象属性，那么该属性变成方法；
+obj.showInfo=function(){
+//输出个人信息；
+ var str="<h2>"+obj.name+"的基本信息</h2>";
+ str+="姓名："+obj.name;
+ str+="<br>性别"+obj.sex;
+ str+="<br>年龄："+obj.age;
+ str+="<br>婚否："+(obj.isMarried?"已婚":"未婚");//三元操作符；
+ return str;//需要有返回值；
+
+}
+//调用系统方法来输出对象方法；
+document.write(obj.showInfo());
+document.write("<hr>");//水平线隔开结果；
+
+//(2)使用大括号来创建对象；
+//格式注意：
+//对象名字一致
+//对象={}
+//用：来加属性
+//用，分隔属性
+//输出对象名字要一致；
+var obj2={
+name : "张三",
+sex:"男",
+age:"23",
+isMarried:true,
+school:undefined,
+showInfo:function(){
+//输出个人信息；
+ var str2="<h2>"+obj2.name+"的基本信息</h2>";
+ str2+="姓名："+obj2.name;
+ str2+="<br>性别"+obj2.sex;
+ str2+="<br>年龄："+obj2.age;
+ str2+="<br>婚否："+(obj2.isMarried?"已婚":"未婚");//三元操作符；
+ return str2;//需要有返回值；
+
+}
+
+
+}
+//调用对象方法，并且输出结果；
+document.write(obj2.showInfo());
+
+// 拓展：系统调用的方法，有（）其实是调用函数，函数预先设有返回值的了；
+// 比如 :
+// document.write();
+// window.alert();
+// window.prompt("请输入数字")；
+
+</script>
+
+
+
+
+</head>
+<body>
+	
+</body>
+</html>
